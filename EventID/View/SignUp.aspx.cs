@@ -36,7 +36,7 @@ namespace EventID.View
             else
             {
                 success = SignUpController.trySignUp(2, Name, Email, Pass, confPass, Address, Gender, out errorMessage);
-                printErrorMssg(success, errorMessage);
+                printErrorMssg(success, errorMessage);//halo ini test doang!!
             }
         }
 
