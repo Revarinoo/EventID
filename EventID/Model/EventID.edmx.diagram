@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="96a471a5652c457b849e4203d79a6d45" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="EventIDModel.Cart" Width="1.5" PointX="5.25" PointY="10.875" />
+        <EntityTypeShape EntityType="EventIDModel.DetailTransaction" Width="1.5" PointX="8.25" PointY="7.75" />
+        <EntityTypeShape EntityType="EventIDModel.HeaderTransaction" Width="1.5" PointX="6" PointY="17.75" />
+        <EntityTypeShape EntityType="EventIDModel.Image" Width="1.5" PointX="5.25" PointY="5.5" />
+        <EntityTypeShape EntityType="EventIDModel.PaymentType" Width="1.5" PointX="3.75" PointY="16.25" />
+        <EntityTypeShape EntityType="EventIDModel.Product" Width="1.5" PointX="3" PointY="7.125" />
+        <EntityTypeShape EntityType="EventIDModel.ProductCategory" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="EventIDModel.Promotion" Width="1.5" PointX="5.25" PointY="13.5" />
+        <EntityTypeShape EntityType="EventIDModel.Role" Width="1.5" PointX="1.5" PointY="19.25" />
+        <EntityTypeShape EntityType="EventIDModel.SubCategory" Width="1.5" PointX="3" PointY="2.875" />
+        <EntityTypeShape EntityType="EventIDModel.User" Width="1.5" PointX="3.75" PointY="18.625" />
+        <AssociationConnector Association="EventIDModel.FK__Cart__ProductID__6FE99F9F" />
+        <AssociationConnector Association="EventIDModel.FK__DetailTra__Produ__3C69FB99" />
+        <AssociationConnector Association="EventIDModel.FK__DetailTra__Trans__3D5E1FD2" />
+        <AssociationConnector Association="EventIDModel.FK__HeaderTra__Payme__2B3F6F97" />
+        <AssociationConnector Association="EventIDModel.FK__HeaderTra__UserI__2A4B4B5E" />
+        <AssociationConnector Association="EventIDModel.FK__Image__ProductID__49C3F6B7" />
+        <AssociationConnector Association="EventIDModel.FK__Product__Product__398D8EEE" />
+        <AssociationConnector Association="EventIDModel.FK__Promotion__Produ__403A8C7D" />
+        <AssociationConnector Association="EventIDModel.FK__SubCatego__Produ__36B12243" />
+        <AssociationConnector Association="EventIDModel.FK__User__RoleID__25869641" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,160 @@
+.info {
+            float: right;
+            border-radius: 12px;
+            border: solid;
+            width: 20%;
+            margin-top: 50px;
+            margin-right: 170px;
+            border-color: #F3C963;
+            color: white;
+            background-color: #e87d1b;
+        }
+
+        .view {
+            padding-top: 30px;
+        }
+
+        .btnProduct {
+            float: left;
+            margin-top: 20px;
+            margin-right: 160px;
+        }
+
+            .btnProduct h6 {
+                margin: 10px 10px 10px 10px;
+                font-weight: bold;
+            }
+
+        .btnCart {
+            color: #e87d1b;
+            background-color: white;
+            float: left;
+            border-radius: 15px;
+            border: solid;
+            border-color: #e87d1b;
+            margin-left: 120px;
+        }
+
+        .btnOrder {
+            color: white;
+            background-color: #e87d1b;
+            float: left;
+            border-radius: 15px;
+            border: solid;
+            border-color: #e87d1b;
+            margin-left: 10px;
+        }
+
+        .chat {
+            color: #e87d1b;
+            background-color: white;
+            float: left;
+            border-radius: 15px;
+            border: solid;
+            border-color: #F3C963;
+        }
+
+            .chat:hover {
+                color: #e87d1b;
+                #F3C963;
+                background-color: white;
+                border-color: #e87d1b;
+                font-weight: bold;
+            }
+
+        .btnCart:hover {
+            background-color: #e87d1b;
+            color: white;
+            border-color: #e87d1b;
+        }
+
+        .btnOrder:hover {
+            background-color: white;
+            color: #e87d1b;
+            border-color: #e87d1b;
+        }
+
+        .description h5 {
+            margin-left: 7%;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            color: #e87d1b;
+            font-weight: bold;
+        }
+
+        .view h4 {
+            color: #e87d1b;
+            font-weight: bold;
+        }
+
+        .pc {
+            margin: 10px 20px 5px 20px;
+        }
+
+        .number {
+            margin-left: 30px;
+        }
+
+        .description p {
+            margin-left: 95px;
+        }
+
+        .description {
+            width: 55%;
+            border-right: 1px solid #F3C963;
+            float: left;
+        }
+
+        .maps {
+            border: solid;
+            border-color: #F3C963;
+            border-radius: 10px;
+            float: right;
+            text-align: center;
+            width: 20%;
+            margin-right: 170px;
+            margin-top: 130px;
+            color: #e87d1b;
+        }
+
+            .maps h5 {
+                margin-top: 20px;
+                margin-bottom: 20px;
+                color: #e87d1b;
+                font-weight: bold;
+            }
+
+            .maps p {
+                margin: 20px;
+            }
+
+        .btnMaps h6 {
+            padding-top: 5px;
+            width: 80%;
+            height: 40px;
+            border: solid;
+            border-radius: 20px;
+            border-color: #e87d1b;
+            color: #e87d1b;
+        }
+
+        .btnMaps {
+            margin-left: 47px;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        .cf:before,
+        .cf:after {
+            content: " "; /* 1 */
+            display: table; /* 2 */
+        }
+
+        .cf:after {
+            clear: both;
+        }
+
+        .cf {
+            *zoom: 1;

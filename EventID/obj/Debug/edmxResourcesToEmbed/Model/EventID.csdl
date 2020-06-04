@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EventIDModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="EventIDEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Carts" EntityType="EventIDModel.Cart" />
+    <EntitySet Name="DetailTransactions" EntityType="EventIDModel.DetailTransaction" />
+    <EntitySet Name="HeaderTransactions" EntityType="EventIDModel.HeaderTransaction" />
+    <EntitySet Name="Images" EntityType="EventIDModel.Image" />
+    <EntitySet Name="PaymentTypes" EntityType="EventIDModel.PaymentType" />
+    <EntitySet Name="Products" EntityType="EventIDModel.Product" />
+    <EntitySet Name="ProductCategories" EntityType="EventIDModel.ProductCategory" />
+    <EntitySet Name="Promotions" EntityType="EventIDModel.Promotion" />
+    <EntitySet Name="Roles" EntityType="EventIDModel.Role" />
+    <EntitySet Name="SubCategories" EntityType="EventIDModel.SubCategory" />
+    <EntitySet Name="Users" EntityType="EventIDModel.User" />
+    <AssociationSet Name="FK__Cart__ProductID__6FE99F9F" Association="EventIDModel.FK__Cart__ProductID__6FE99F9F">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="Cart" EntitySet="Carts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DetailTra__Produ__3C69FB99" Association="EventIDModel.FK__DetailTra__Produ__3C69FB99">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="DetailTransaction" EntitySet="DetailTransactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DetailTra__Trans__3D5E1FD2" Association="EventIDModel.FK__DetailTra__Trans__3D5E1FD2">
+      <End Role="HeaderTransaction" EntitySet="HeaderTransactions" />
+      <End Role="DetailTransaction" EntitySet="DetailTransactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HeaderTra__Payme__2B3F6F97" Association="EventIDModel.FK__HeaderTra__Payme__2B3F6F97">
+      <End Role="PaymentType" EntitySet="PaymentTypes" />
+      <End Role="HeaderTransaction" EntitySet="HeaderTransactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__HeaderTra__UserI__2A4B4B5E" Association="EventIDModel.FK__HeaderTra__UserI__2A4B4B5E">
+      <End Role="User" EntitySet="Users" />
+      <End Role="HeaderTransaction" EntitySet="HeaderTransactions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Image__ProductID__49C3F6B7" Association="EventIDModel.FK__Image__ProductID__49C3F6B7">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="Image" EntitySet="Images" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Product__Product__398D8EEE" Association="EventIDModel.FK__Product__Product__398D8EEE">
+      <End Role="ProductCategory" EntitySet="ProductCategories" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Promotion__Produ__403A8C7D" Association="EventIDModel.FK__Promotion__Produ__403A8C7D">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="Promotion" EntitySet="Promotions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SubCatego__Produ__36B12243" Association="EventIDModel.FK__SubCatego__Produ__36B12243">
+      <End Role="ProductCategory" EntitySet="ProductCategories" />
+      <End Role="SubCategory" EntitySet="SubCategories" />
+    </AssociationSet>
+    <AssociationSet Name="FK__User__RoleID__25869641" Association="EventIDModel.FK__User__RoleID__25869641">
+      <End Role="Role" EntitySet="Roles" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Cart">
+    <Key>
+      <PropertyRef Name="CartID" />
+    </Key>
+    <Property Name="CartID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="EventIDModel.FK__Cart__ProductID__6FE99F9F" FromRole="Cart" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="DetailTransaction">
+    <Key>
+      <PropertyRef Name="TransactionID" />
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="TransactionID" Type="Int32" Nullable="false" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Product" Relationship="EventIDModel.FK__DetailTra__Produ__3C69FB99" FromRole="DetailTransaction" ToRole="Product" />
+    <NavigationProperty Name="HeaderTransaction" Relationship="EventIDModel.FK__DetailTra__Trans__3D5E1FD2" FromRole="DetailTransaction" ToRole="HeaderTransaction" />
+  </EntityType>
+  <EntityType Name="HeaderTransaction">
+    <Key>
+      <PropertyRef Name="TransactionID" />
+    </Key>
+    <Property Name="TransactionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="PaymentTypeID" Type="Int32" Nullable="false" />
+    <Property Name="TransactionDate" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="DetailTransactions" Relationship="EventIDModel.FK__DetailTra__Trans__3D5E1FD2" FromRole="HeaderTransaction" ToRole="DetailTransaction" />
+    <NavigationProperty Name="PaymentType" Relationship="EventIDModel.FK__HeaderTra__Payme__2B3F6F97" FromRole="HeaderTransaction" ToRole="PaymentType" />
+    <NavigationProperty Name="User" Relationship="EventIDModel.FK__HeaderTra__UserI__2A4B4B5E" FromRole="HeaderTransaction" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Image">
+    <Key>
+      <PropertyRef Name="ImageID" />
+    </Key>
+    <Property Name="ImageID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="ImageName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Product" Relationship="EventIDModel.FK__Image__ProductID__49C3F6B7" FromRole="Image" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="PaymentType">
+    <Key>
+      <PropertyRef Name="PaymentTypeID" />
+    </Key>
+    <Property Name="PaymentTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PaymetTypeName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="HeaderTransactions" Relationship="EventIDModel.FK__HeaderTra__Payme__2B3F6F97" FromRole="PaymentType" ToRole="HeaderTransaction" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ProductID" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductCategoryID" Type="Int32" Nullable="false" />
+    <Property Name="VendorFlag" Type="Int32" Nullable="false" />
+    <Property Name="ProductName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Price" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ProductStatus" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SubCategoryID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Carts" Relationship="EventIDModel.FK__Cart__ProductID__6FE99F9F" FromRole="Product" ToRole="Cart" />
+    <NavigationProperty Name="DetailTransactions" Relationship="EventIDModel.FK__DetailTra__Produ__3C69FB99" FromRole="Product" ToRole="DetailTransaction" />
+    <NavigationProperty Name="Images" Relationship="EventIDModel.FK__Image__ProductID__49C3F6B7" FromRole="Product" ToRole="Image" />
+    <NavigationProperty Name="ProductCategory" Relationship="EventIDModel.FK__Product__Product__398D8EEE" FromRole="Product" ToRole="ProductCategory" />
+    <NavigationProperty Name="Promotions" Relationship="EventIDModel.FK__Promotion__Produ__403A8C7D" FromRole="Product" ToRole="Promotion" />
+  </EntityType>
+  <EntityType Name="ProductCategory">
+    <Key>
+      <PropertyRef Name="ProductCategoryID" />
+    </Key>
+    <Property Name="ProductCategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductCategoryName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Products" Relationship="EventIDModel.FK__Product__Product__398D8EEE" FromRole="ProductCategory" ToRole="Product" />
+    <NavigationProperty Name="SubCategories" Relationship="EventIDModel.FK__SubCatego__Produ__36B12243" FromRole="ProductCategory" ToRole="SubCategory" />
+  </EntityType>
+  <EntityType Name="Promotion">
+    <Key>
+      <PropertyRef Name="PromotionID" />
+    </Key>
+    <Property Name="PromotionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="Discount" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="EventIDModel.FK__Promotion__Produ__403A8C7D" FromRole="Promotion" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Users" Relationship="EventIDModel.FK__User__RoleID__25869641" FromRole="Role" ToRole="User" />
+  </EntityType>
+  <EntityType Name="SubCategory">
+    <Key>
+      <PropertyRef Name="SubCategoryID" />
+    </Key>
+    <Property Name="SubCategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductCategoryID" Type="Int32" Nullable="false" />
+    <Property Name="SubCategoryName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ProductCategory" Relationship="EventIDModel.FK__SubCatego__Produ__36B12243" FromRole="SubCategory" ToRole="ProductCategory" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleID" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserEmail" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserPassword" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserGender" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserAddress" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserStatus" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="HeaderTransactions" Relationship="EventIDModel.FK__HeaderTra__UserI__2A4B4B5E" FromRole="User" ToRole="HeaderTransaction" />
+    <NavigationProperty Name="Role" Relationship="EventIDModel.FK__User__RoleID__25869641" FromRole="User" ToRole="Role" />
+  </EntityType>
+  <Association Name="FK__Cart__ProductID__6FE99F9F">
+    <End Type="EventIDModel.Product" Role="Product" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="EventIDModel.Cart" Role="Cart" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="Cart">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DetailTra__Produ__3C69FB99">
+    <End Type="EventIDModel.Product" Role="Product" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="EventIDModel.DetailTransaction" Role="DetailTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="DetailTransaction">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DetailTra__Trans__3D5E1FD2">
+    <End Type="EventIDModel.HeaderTransaction" Role="HeaderTransaction" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="EventIDModel.DetailTransaction" Role="DetailTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HeaderTransaction">
+        <PropertyRef Name="TransactionID" />
+      </Principal>
+      <Dependent Role="DetailTransaction">
+        <PropertyRef Name="TransactionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HeaderTra__Payme__2B3F6F97">
+    <End Type="EventIDModel.PaymentType" Role="PaymentType" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="EventIDModel.HeaderTransaction" Role="HeaderTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PaymentType">
+        <PropertyRef Name="PaymentTypeID" />
+      </Principal>
+      <Dependent Role="HeaderTransaction">
+        <PropertyRef Name="PaymentTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__HeaderTra__UserI__2A4B4B5E">
+    <End Type="EventIDModel.User" Role="User" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="EventIDModel.HeaderTransaction" Role="HeaderTransaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="HeaderTransaction">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Image__ProductID__49C3F6B7">
+    <End Type="EventIDModel.Product" Role="Product" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="EventIDModel.Image" Role="Image" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="Image">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Product__Product__398D8EEE">
+    <End Type="EventIDModel.ProductCategory" Role="ProductCategory" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="EventIDModel.Product" Role="Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCategory">
+        <PropertyRef Name="ProductCategoryID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="ProductCategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Promotion__Produ__403A8C7D">
+    <End Type="EventIDModel.Product" Role="Product" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="EventIDModel.Promotion" Role="Promotion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="Promotion">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SubCatego__Produ__36B12243">
+    <End Type="EventIDModel.ProductCategory" Role="ProductCategory" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="EventIDModel.SubCategory" Role="SubCategory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCategory">
+        <PropertyRef Name="ProductCategoryID" />
+      </Principal>
+      <Dependent Role="SubCategory">
+        <PropertyRef Name="ProductCategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__User__RoleID__25869641">
+    <End Type="EventIDModel.Role" Role="Role" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="EventIDModel.User" Role="User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Role">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

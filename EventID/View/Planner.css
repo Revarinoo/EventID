@@ -1,0 +1,161 @@
+.planner-container {
+            width: auto;
+            height: 250px;
+            background-color: #E87D1B;
+        }
+
+        .venue-container {
+            width: auto;
+        }
+
+        .venue {
+            margin-top: 20px;
+            width: 890px;
+            background-color: #E87D1B;
+            border-radius: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        .venue-box {
+            margin-top: 20px;
+            width: 160px;
+            height: 130px;
+            border-radius: 20px;
+            background-color: white;
+            margin-right: 20px;
+            margin-left: 20px;
+            color: #E87D1B;
+        }
+
+            .venue-box:hover {
+                color: white;
+                background-color: #F3C963;
+            }
+
+        .image {
+            width: 160px;
+            height: 85px;
+            border-radius: 20px 20px 0 0;
+        }
+
+        h4 {
+            margin-left: 20px;
+            padding-top: 15px;
+            font-weight: bold;
+            color: white;
+        }
+
+        h1 {
+            padding-top: 40px;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 50px;
+        }
+
+        .box-category {
+            width: 100px;
+            height: 70px;
+            background-color: white;
+            border-radius: 15px;
+            flex: 1;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+
+        .all {
+            margin-left: 20px;
+            width: 45px;
+            height: 35px;
+            color: white;
+            background-color: #F3C963;
+            border-radius: 10px;
+            flex-grow: 1;
+        }
+
+        .white-background {
+            margin-left: 10px;
+            width: 75px;
+            height: 35px;
+            color: #E87D1B;
+            background-color: white;
+            border-radius: 10px;
+            flex-grow: 1;
+        }
+
+            .white-background:hover {
+                color: white;
+                background-color: #F3C963;
+            }
+
+        .choose {
+            display: flex;
+        }
+
+        .price {
+            margin-top: -7px;
+        }
+
+        .venue-box h6 {
+            margin-left: 10px;
+        }
+
+        h5 {
+            padding-top: 8px;
+            color: #E87D1B;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .all h6 {
+            padding-top: 7px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .white-background h6 {
+            padding-top: 7px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: white;
+        }
+
+        .cek {
+            width: 30px;
+            text-align: center;
+            margin-top: -5px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        .category {
+            display: flex;
+        }
+
+        .btnVenue {
+            width:240px;
+            margin-right: 20px;
+            margin-top: 25px;
+            float:right;
+            padding-bottom:20px;
+        }
+        .cf:before,
+        .cf:after {
+            content: " "; /* 1 */
+            display: table; /* 2 */
+        }
+
+        .cf:after {
+            clear: both;
+        }
+
+        .cf {
+            *zoom: 1;
+        }

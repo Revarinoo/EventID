@@ -1,0 +1,166 @@
+﻿.backgroundProduct {
+    background-color: #e87d1b;
+    height: 300px;
+}
+
+.card {
+    margin-top: 60px;
+    width: 200px;
+    border-radius: 20px;
+    margin-left: 60px;
+}
+
+.customPosition2 {
+    height: 100px;
+    padding-top: 27px;
+}
+
+.fa-forward {
+    color: black;
+    font-size: 25px;
+    margin-top: 40px;
+}
+
+.fa-backward {
+    color: black;
+    font-size: 25px;
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+.btnPrevNext {
+    opacity: 1;
+    width: 20px;
+}
+
+.txtCategory a {
+    color: black;
+}
+
+    .txtCategory a:hover {
+        text-decoration: none;
+    }
+
+@media (min-width: 768px) {
+    /* show 3 items */
+    .op3 .carousel-inner .active,
+    .op3 .carousel-inner .active + .carousel-item,
+    .op3 .carousel-inner .active + .carousel-item + .carousel-item,
+    .op3 .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
+        display: block;
+    }
+
+    .op3 .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .op3 .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+    .op3 .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item,
+    .op3 .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
+        transition: none;
+    }
+
+    .op3 .carousel-inner .carousel-item-next,
+    .op3 .carousel-inner .carousel-item-prev {
+        position: relative;
+        transform: translate3d(0, 0, 0);
+    }
+
+    .op3 .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -25%;
+        /*z-index: -1;*/
+        display: block;
+        visibility: visible;
+    }
+
+    /* left or forward direction */
+    .op3 .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+    .op3 .carousel-item-next.carousel-item-left + .carousel-item,
+    .op3 .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+    .op3 .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item,
+    .op3 .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+
+    /* farthest right hidden item must be abso position for animations */
+    .op3 .carousel-inner .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        /*left: -20%;*/
+        z-index: 0.2;
+        display: block;
+        visibility: visible;
+    }
+
+    /* right or prev direction */
+    .op3 .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+    .op3 .carousel-item-prev.carousel-item-right + .carousel-item,
+    .op3 .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+    .op3 .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item,
+    .op3 .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+}
+
+.PositionDisp {
+    display: inline-block;
+    margin-left: 68px;
+    margin-top: 20px;
+    border: 0.5px solid white;
+    margin-bottom: 20px;
+}
+
+.backgroundProduct1 {
+    background-color: #e87d1b;
+    max-height: 5000px;
+    border-radius: 30px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.thumbnail {
+    width: 200px;
+    height: 150px;
+    display: inline-block;
+    margin: 20px 20px 20px auto;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border-radius: 25px;
+    -webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
+}
+
+.cobabanner {
+    height: 100px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 25px; 
+    border-top-right-radius: 25px;
+}
+
+.pst {
+    margin-left: 40px;
+    color: white;
+    font-family: Arial black;
+    font-size: 20px;
+}
+
+.captions {
+    text-align: left;
+    caption-side: bottom;
+}
+
+.captions p, .captions h5 {
+    color: #e87d1b;
+    margin-bottom: -3px;
+    margin-left: 15px;
+}

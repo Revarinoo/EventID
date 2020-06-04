@@ -1,0 +1,180 @@
+.SignUpCard {
+    width: 500px;
+    height: auto;
+    position: relative;
+    margin: 61px auto 61px auto;
+    background-color: #e87d1b;
+    border-radius: 60px;
+    border: 1px solid gray;
+    text-align: center;
+}
+
+.SignUpCard p {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 20pt;
+    color: white;
+    text-align: center;
+}
+
+.SignUpbtn {
+    margin-bottom: 10px;
+}
+
+.FormField {
+    margin: auto;
+    margin-bottom: 10px;
+    vertical-align: middle;
+    height: 50px;
+    width: 350px;
+    border-radius: 50px;
+}
+
+.btncolor {
+    margin-top: 15px;
+    font-size: 16pt;
+    color: #e87d1b;
+    background-color: #fff;
+    border-color: #fff;
+    border-radius: 20px;
+}
+
+.btncolor:hover {
+    border-color: gray;
+    color: #e87d1b;
+}
+
+.LoginCard {
+    width: 500px;
+    height: 370px;
+    position: relative;
+    margin: 76px auto 76px auto;
+    background-color: #e87d1b;
+    border-radius: 70px;
+    border: 1px solid gray;
+    text-align: center;
+}
+
+.LoginCard p {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    font-size: 20pt;
+    color: white;
+    text-align: center;
+}
+
+.frgtpass {
+    margin-top: 5px;
+    background-color: transparent;
+    border: 0;
+}
+
+.banner-aboutus{
+    height: 45vh;
+    width: 100%;
+    background-image: url(Assets/orange-office-room-interior-design-wallpaper.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.HeaderText {
+    font-size: 40pt;
+    color: #e87d1b;
+    text-align: center;
+    font-weight: lighter;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.text {
+    color: black;
+    text-align: center;
+    width: 100vh;
+    vertical-align: middle;
+    margin: auto;
+}
+
+.aboutuscard{
+    box-sizing: border-box;
+    float: left;
+    height: auto;
+    width: auto;
+    text-align: center;
+    background-color: white;
+    margin: auto;
+    padding-top: 0;
+}
+
+.banner-contactus{
+    height: 45vh;
+    width: 100%;
+    background-image: url(Assets/about_purpose.0f80ee09.jpg);
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+}
+
+.contactuscard{
+    box-sizing: border-box;
+    float: left;
+    height: auto;
+    width: 600px;
+    text-align: center;
+    background-color: transparent;
+    margin: 75px 70px 0px 125px;
+    padding-top: 0;
+    border-color: transparent;
+    border-radius: 15px;
+}
+
+.categorycard {
+    height: 300px;
+    width: 100%;
+    background-color: #e87d1b;
+    margin: auto auto 0 auto;
+    position: relative;
+}
+
+.thumbnail {
+    width: 200px;
+    height: 150px;
+    display: block;
+    margin: 20px auto 20px auto;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border-radius: 25px;
+    -webkit-transition: border .2s ease-in-out;
+         -o-transition: border .2s ease-in-out;
+            transition: border .2s ease-in-out;
+}
+
+.cobabanner {
+    height: 100px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 25px; 
+    border-top-right-radius: 25px;
+}
+
+.seemorecard {
+    position: relative;
+    margin: 100px auto 50px auto;
+    width: 80%;
+    height: auto;
+    background-color: #e87d1b;
+    border-radius: 25px;
+    border: 1px solid rgba(0,0,0,0.125);
+    text-align: left;
+}
+
+.captions {
+    text-align: left;
+    caption-side: bottom;
+}
+
+.captions p, .captions h5 {
+    color: #e87d1b;
+    margin-bottom: -3px;
+    margin-left: 15px;
+}

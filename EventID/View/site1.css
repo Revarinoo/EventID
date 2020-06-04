@@ -1,0 +1,80 @@
+        .bg-light {
+            background-color: #e87d1b !important;
+        }
+
+        .navbar {
+            height: 60px;
+        }
+
+        .form-control {
+            border-radius: 20px;
+            height: 35px;
+            margin-top: 15px;
+        }
+
+        #fcolor {
+            background-color: #e87d1b;
+            color: white;
+        }
+
+        .btnLoginBackground {
+            background-color: white;
+            color: #e87d1b;
+            border: 0;
+            border-radius: 12px;
+            margin-left: 10px;
+        }
+
+            .btnLoginBackground:hover {
+                color: #e87d1b;
+                background-color: white;
+            }
+
+        .btnRegisBackground:hover {
+            color: white;
+            background-color: #e87d1b;
+            border-color: white;
+        }
+
+        .btnRegisBackground {
+            background-color: #e87d1b;
+            color: white;
+            border-radius: 12px;
+            margin-left: 10px;
+            border-color: white;
+        }
+
+        ::placeholder {
+            color: #e87d1b !important;
+        }
+
+        .navbar-brand {
+            font-size: 25px;
+            margin-bottom: 2px;
+        }
+
+        .footer {
+            position: relative;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            width: 100%;
+            background-color: #e87d1b;
+            color: white;
+            height: 50px;
+        }
+
+        #position {
+            padding-top: 10px;
+            margin-left: 20px;
+        }
+
+        #txtColor {
+            color: white;
+        }
+
+    .position9 {
+  margin-right: 20px;
+  text-align: right;
+  margin-top: -50px;
+}

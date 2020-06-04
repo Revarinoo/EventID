@@ -1,0 +1,111 @@
+C:\Users\asus\Desktop\EventID\EventID\bin\ApplicationInsights.config
+C:\Users\asus\Desktop\EventID\EventID\bin\roslyn\csc.exe
+C:\Users\asus\Desktop\EventID\EventID\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\asus\Desktop\EventID\EventID\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\asus\Desktop\EventID\EventID\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\asus\Desktop\EventID\EventID\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\asus\Desktop\EventID\EventID\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\asus\Desktop\EventID\EventID\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\asus\Desktop\EventID\EventID\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\asus\Desktop\EventID\EventID\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\asus\Desktop\EventID\EventID\bin\roslyn\vbc.exe
+C:\Users\asus\Desktop\EventID\EventID\bin\roslyn\VBCSCompiler.exe
+C:\Users\asus\Desktop\EventID\EventID\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\asus\Desktop\EventID\EventID\bin\EventID.dll.config
+C:\Users\asus\Desktop\EventID\EventID\bin\EventID.dll
+C:\Users\asus\Desktop\EventID\EventID\bin\EventID.pdb
+C:\Users\asus\Desktop\EventID\EventID\bin\EntityFramework.dll
+C:\Users\asus\Desktop\EventID\EventID\bin\EntityFramework.SqlServer.dll
+C:\Users\asus\Desktop\EventID\EventID\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\asus\Desktop\EventID\EventID\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\asus\Desktop\EventID\EventID\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\asus\Desktop\EventID\EventID\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\asus\Desktop\EventID\EventID\bin\Microsoft.AI.Web.dll
+C:\Users\asus\Desktop\EventID\EventID\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\asus\Desktop\EventID\EventID\bin\Microsoft.ApplicationInsights.dll
+C:\Users\asus\Desktop\EventID\EventID\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\asus\Desktop\EventID\EventID\bin\EntityFramework.xml
+C:\Users\asus\Desktop\EventID\EventID\bin\EntityFramework.SqlServer.xml
+C:\Users\asus\Desktop\EventID\EventID\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\asus\Desktop\EventID\EventID\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\asus\Desktop\EventID\EventID\bin\Microsoft.AI.Web.xml
+C:\Users\asus\Desktop\EventID\EventID\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\asus\Desktop\EventID\EventID\bin\Microsoft.ApplicationInsights.xml
+C:\Users\asus\Desktop\EventID\EventID\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\asus\Desktop\EventID\EventID\obj\Debug\EventID.csprojResolveAssemblyReference.cache
+C:\Users\asus\Desktop\EventID\EventID\obj\Debug\EventID.dll
+C:\Users\asus\Desktop\EventID\EventID\obj\Debug\EventID.pdb
+C:\Users\andre\Desktop\EventID\EventID\EventID\bin\ApplicationInsights.config
+C:\Users\andre\Desktop\EventID\EventID\EventID\bin\roslyn\csc.exe
+C:\Users\andre\Desktop\EventID\EventID\EventID\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\andre\Desktop\EventID\EventID\EventID\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\andre\Desktop\EventID\EventID\EventID\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\andre\Desktop\EventID\EventID\EventID\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\andre\Desktop\EventID\EventID\EventID\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\andre\Desktop\EventID\EventID\EventID\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\andre\Desktop\EventID\EventID\EventID\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\andre\Desktop\EventID\EventID\EventID\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\andre\Desktop\EventID\EventID\EventID\bin\roslyn\vbc.exe
+C:\Users\andre\Desktop\EventID\EventID\EventID\bin\roslyn\VBCSCompiler.exe
+C:\Users\andre\Desktop\EventID\EventID\EventID\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\andre\Desktop\EventID\EventID\EventID\bin\EventID.dll.config
+C:\Users\andre\Desktop\EventID\EventID\EventID\bin\EventID.dll
+C:\Users\andre\Desktop\EventID\EventID\EventID\bin\EventID.pdb
+C:\Users\andre\Desktop\EventID\EventID\EventID\bin\EntityFramework.dll
+C:\Users\andre\Desktop\EventID\EventID\EventID\bin\EntityFramework.SqlServer.dll
+C:\Users\andre\Desktop\EventID\EventID\EventID\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\andre\Desktop\EventID\EventID\EventID\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\andre\Desktop\EventID\EventID\EventID\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\andre\Desktop\EventID\EventID\EventID\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\andre\Desktop\EventID\EventID\EventID\bin\Microsoft.AI.Web.dll
+C:\Users\andre\Desktop\EventID\EventID\EventID\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\andre\Desktop\EventID\EventID\EventID\bin\Microsoft.ApplicationInsights.dll
+C:\Users\andre\Desktop\EventID\EventID\EventID\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\andre\Desktop\EventID\EventID\EventID\bin\EntityFramework.xml
+C:\Users\andre\Desktop\EventID\EventID\EventID\bin\EntityFramework.SqlServer.xml
+C:\Users\andre\Desktop\EventID\EventID\EventID\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\andre\Desktop\EventID\EventID\EventID\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\andre\Desktop\EventID\EventID\EventID\bin\Microsoft.AI.Web.xml
+C:\Users\andre\Desktop\EventID\EventID\EventID\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\andre\Desktop\EventID\EventID\EventID\bin\Microsoft.ApplicationInsights.xml
+C:\Users\andre\Desktop\EventID\EventID\EventID\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\andre\Desktop\EventID\EventID\EventID\obj\Debug\EventID.csprojResolveAssemblyReference.cache
+C:\Users\andre\Desktop\EventID\EventID\EventID\obj\Debug\EventID.dll
+C:\Users\andre\Desktop\EventID\EventID\EventID\obj\Debug\EventID.pdb
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\bin\ApplicationInsights.config
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\bin\roslyn\csc.exe
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\bin\roslyn\vbc.exe
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\bin\roslyn\VBCSCompiler.exe
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\bin\EventID.dll.config
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\bin\EventID.dll
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\bin\EventID.pdb
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\bin\EntityFramework.dll
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\bin\EntityFramework.SqlServer.dll
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\bin\Microsoft.AI.Web.dll
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\bin\Microsoft.ApplicationInsights.dll
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\bin\EntityFramework.xml
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\bin\EntityFramework.SqlServer.xml
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\bin\Microsoft.AI.Web.xml
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\bin\Microsoft.ApplicationInsights.xml
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\obj\Debug\EventID.csprojResolveAssemblyReference.cache
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\obj\Debug\EventID.dll
+C:\Users\asus\Documents\semester 4\SE\Project\EventID\EventID\obj\Debug\EventID.pdb
