@@ -8,7 +8,7 @@ namespace EventID.Controller
 {
     public class SignUpController
     {
-        public static bool trySignUp(string Name, string Email, string Pass, string confPass, string address, string gender, out string errorMessage)
+        public static bool trySignUp(int roleId, string Name, string Email, string Pass, string confPass, string address, string gender, out string errorMessage)
         {
             errorMessage = "";
             if (Name == "")
@@ -51,7 +51,7 @@ namespace EventID.Controller
             }
             else
             {
-                SignUpHandler.doRegis(Name, Email, Pass, confPass, address, gender);
+                SignUpHandler.doRegis(roleId, Name, Email, Pass, confPass, address, gender);
                 return true;
             }
         }

@@ -1,4 +1,4 @@
-﻿using EventID.Controller;
+using EventID.Controller;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,10 +27,24 @@ namespace EventID.View
             string Address = address.Text.ToString();
             string Gender = gender.Text.ToString();
             string errorMessage = "";
-            bool success = SignUpController.trySignUp(Name, Email, Pass, confPass, Address, Gender, out errorMessage);
-            if (!success)
+            bool success = false;
+            if (vendorCheck.Checked)
             {
-                regError.Text = errorMessage;
+                success = SignUpController.trySignUp(3, Name, Email, Pass, confPass, Address, Gender, out errorMessage);
+                printErrorMssg(success, errorMessage);
+            }
+            else
+            {
+                success = SignUpController.trySignUp(2, Name, Email, Pass, confPass, Address, Gender, out errorMessage);
+                printErrorMssg(success, errorMessage);
+            }
+        }
+
+        private void printErrorMssg(bool x, string mssg)
+        {
+            if (!x)
+            {
+                regError.Text = mssg;
             }
             else
             {

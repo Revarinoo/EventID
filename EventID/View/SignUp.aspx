@@ -18,6 +18,8 @@
             </div>
             <asp:TextBox ID="password" runat="server" placeholder="Password" CssClass="form-control FormField" TextMode="Password"></asp:TextBox>
             <asp:TextBox ID="conf_pass" runat="server" placeholder="Retype Password" CssClass="form-control FormField" TextMode="Password"></asp:TextBox>
+            <asp:Label ID="Label2" runat="server" Text="Are you a vendor ?" ForeColor="White"></asp:Label>
+            <asp:CheckBox ID="vendorCheck" runat="server" />
         </div>
          <div style="color:white;">
          Already a member? 

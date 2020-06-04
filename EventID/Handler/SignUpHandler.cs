@@ -8,9 +8,9 @@ namespace EventID.Handler
 {
     public class SignUpHandler
     {
-        public static void doRegis(string Name, string Email, string Pass, string confPass, string address, string gender)
+        public static void doRegis(int roleId, string Name, string Email, string Pass, string confPass, string address, string gender)
         {
-            UserRepo.InsertUser(2, Name, Email, Pass, gender, address, "active");
+            UserRepo.InsertUser(roleId, Name, Email, Pass, gender, address, "active");
         }
     }
 }
