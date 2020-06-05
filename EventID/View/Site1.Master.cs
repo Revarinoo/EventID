@@ -19,10 +19,20 @@ namespace EventID.View
             {
                 btnLogin1.Visible = false;
                 btnRegister1.Visible = false;
+
+                if (Session["role"].Equals(3))
+                {
+                    addItem1.Visible = true;
+                }
+                else
+                {
+                    addItem1.Visible = false;
+                }
             }
             else
             {
                 btnLogout1.Visible = false;
+                addItem1.Visible = false;
             }
 
         }
@@ -42,6 +52,11 @@ namespace EventID.View
             HttpCookie cookie = Response.Cookies.Get("user");
             cookie.Expires = DateTime.Now.AddHours(-2);
             Response.Redirect("Home.aspx");
+        }
+
+        protected void addItem1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AddItem.aspx");
         }
     }
 }

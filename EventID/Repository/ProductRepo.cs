@@ -1,4 +1,5 @@
-﻿using EventID.Model;
+﻿using EventID.Factory;
+using EventID.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,22 @@ namespace EventID.Repository
     public class ProductRepo
     {
         static EventIDEntities db = new EventIDEntities();
+        public static int insertProduct(int catId, int vendorId, string name, int price, string desc
+            , int subcatId)
+        {
+            Product p = ProductFactory.insertProduct(catId, vendorId, name, price, desc, "avaiable", subcatId);
+            db.Products.Add(p);
+            db.SaveChanges();
+            return p.ProductID;
+        } 
+
+        public static void insertImage(int prodId, string name)
+        {
+            Image i = ProductFactory.insertImage(prodId, name);
+            db.Images.Add(i);
+            db.SaveChanges();
+        }
+
         public static List<Product> getProduct()
         {
             return db.Products.ToList();

@@ -46,6 +46,8 @@ namespace EventID.View
             else
             {
                 Session["user"] = u;
+                Session["role"] = u.RoleID;
+                Session["id"] = u.UserID;
                 if (remMe.Checked)
                 {
                     HttpCookie cookie = new HttpCookie("user", u.UserID.ToString());
