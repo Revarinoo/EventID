@@ -43,6 +43,7 @@
                         <i class="fa" style="font-size:30px; color:white;">&#xf07a;</i>
                         <span class='badge badge-warning' id='lblCartCount'> <asp:Label ID="labelCart" Text="text" runat="server" /> </span>
                     </a>
+                    <asp:Button ID="addItem1" Text="Add Item" runat="server" class="btn btn-primary btnLoginBackground" OnClick="addItem1_Click" />
                     <asp:Button ID="btnLogin1" Text="Login" runat="server" class="btn btn-primary btnLoginBackground" OnClick="btnLogin1_Click" />
                     <asp:Button ID="btnRegister1" Text="Register" runat="server" class="btn btn-primary btnRegisBackground" OnClick="btnRegis1_Click" />
                     <asp:Button ID="btnLogout1" Text="Logout" runat="server" class="btn btn-primary btnRegisBackground" OnClick="btnLogout1_Click" />
