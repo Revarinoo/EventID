@@ -1,4 +1,5 @@
 ﻿using EventID.Handler;
+using EventID.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,6 +45,11 @@ namespace EventID.Controller
                 ProductHandler.addImage(x, imgName);
                 return true;
             }
+        }
+
+        public static Product getProductById(int productId)
+        {
+            return ProductHandler.getProductById(productId);
         }
     }
 }

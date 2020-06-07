@@ -29,5 +29,11 @@ namespace EventID.Repository
                           select x).FirstOrDefault();
             return user;
         }
+
+        public static User GetUserByID(int id)
+        {
+            User users = db.Users.Where(a => a.UserID == id).FirstOrDefault();
+            return users;
+        }
     }
 }

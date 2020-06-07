@@ -1,4 +1,5 @@
-﻿using EventID.Repository;
+﻿using EventID.Model;
+using EventID.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,11 +13,14 @@ namespace EventID.View
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            List<Model.Cart> cart = CartRepo.getListCart();
-            int value = cart.Count;
-            labelCart.Text = value.ToString();
+            int value;
+            labelCart.Text = 0.ToString();
             if (Session["user"] != null)
             {
+                User us = (User)Session["user"];
+                List<Model.Cart> cart = CartRepo.getListCartByID(us.UserID);
+                value = cart.Count;
+                labelCart.Text = value.ToString();
                 btnLogin1.Visible = false;
                 btnRegister1.Visible = false;
 

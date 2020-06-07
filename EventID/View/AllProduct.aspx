@@ -130,7 +130,7 @@
         </h1>
         <asp:Repeater ID="repeaterVenue" Visible="true" runat="server">
             <ItemTemplate>
-                <a href="./ViewProduct.aspx">
+                <a href="./ViewProduct.aspx?ID=<%#Eval("ProductID") %>">
                     <div class="row" style="display: inline-block; margin-left: 20px;">
                         <div class="col-sm-3 col-md-3">
                             <div class="thumbnail">
@@ -157,7 +157,7 @@
         </h1>
         <asp:Repeater ID="repeaterCatering" Visible="true" runat="server">
             <ItemTemplate>
-                <a href="./ViewProduct.aspx">
+                <a href="./ViewProduct.aspx?ID=<%#Eval("ProductID") %>">
                     <div class="row" style="display: inline-block; margin-left: 20px;">
                         <div class="col-sm-3 col-md-3">
                             <div class="thumbnail">
@@ -184,7 +184,7 @@
         </h1>
         <asp:Repeater ID="repeaterDecoration" Visible="true" runat="server">
             <ItemTemplate>
-                <a href="./ViewProduct.aspx">
+                <a href="./ViewProduct.aspx?ID=<%#Eval("ProductID") %>">
                     <div class="row" style="display: inline-block; margin-left: 20px;">
                         <div class="col-sm-3 col-md-3">
                             <div class="thumbnail">

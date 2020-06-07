@@ -6,7 +6,7 @@
         <MappingFragment StoreEntitySet="Cart">
           <ScalarProperty Name="Quantity" ColumnName="Quantity" />
           <ScalarProperty Name="ProductID" ColumnName="ProductID" />
-          <ScalarProperty Name="CartID" ColumnName="CartID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

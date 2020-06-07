@@ -39,5 +39,10 @@ namespace EventID.Handler
         {
             ProductRepo.insertImage(prodId, name);
         }
+
+        public static Product getProductById(int productId)
+        {
+            return ProductRepo.GetProductByID(productId);
+        }
     }
 }

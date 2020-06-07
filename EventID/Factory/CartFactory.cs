@@ -8,11 +8,13 @@ namespace EventID.Factory
 {
     public class CartFactory
     {
-        public static Cart createCartItem(int ProductID, int Quantity)
+        public static Cart createCartItem(int userID, int productID, int qty)
         {
             Cart cart = new Cart();
-            cart.ProductID = ProductID;
-            cart.Quantity = Quantity;
+            cart.UserID = userID;
+            cart.ProductID = productID;
+            cart.Quantity = qty;
+
             return cart;
         }
     }

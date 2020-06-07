@@ -10,40 +10,43 @@
     <div class="container-fluid">
         <div class="backgroundCart">
             <h1 class="card-subtitle judul">
-                <asp:Label ID="LblCart" class="pst" Text="Cart" runat="server" />
+                <asp:Label ID="LblCart" CssClass="pst" Text="Cart" runat="server" />
                 &nbsp;<br />
             </h1>
             <div class="background" align="center">
-                <asp:Label ID="TitleKosong" class="title" Visible="false" runat="server"></asp:Label>
+                <asp:Label ID="TitleKosong" CssClass="title" Visible="false" runat="server">
                     <p class="title"><br />Your cart is empty<br /><br /></p>
-                    
                     <div align="center">
-                        <asp:Button id="BelanjaBtn" class="buttonBlnja buttonBlnja1" visible="false" OnClick="btnShop_Click" Text="Shop Now" runat="server" />
+                        <asp:Button ID="BelanjaBtn" CssClass="buttonBlnja buttonBlnja1" Visible="false" Text="Shop Now" runat="server" />
                     </div>
-                    
                     <br />
-                
+                </asp:Label>
             </div>
             <br />
-            <asp:Table ID="ListCartTable" class="table backgroundTable" Visible="false" runat="server">
+            <asp:Table ID="ListCartTable" CssClass="table backgroundTable" Visible="false" runat="server">
                 <asp:TableHeaderRow>
-                    <asp:TableHeaderCell class="text-center"><i style='font-size:18px' class='far'>&#xf14a;</i>  All Category</asp:TableHeaderCell>
-                    <asp:TableHeaderCell class="text-visible text-center">Price</asp:TableHeaderCell>
-                    <asp:TableHeaderCell class="text-visible text-center">Quantity</asp:TableHeaderCell>
-                    <asp:TableHeaderCell class="text-visible text-center">Total Price</asp:TableHeaderCell>
-                    <asp:TableHeaderCell class="text-visible text-center" ColumnSpan="1">Action</asp:TableHeaderCell>
+                    <asp:TableHeaderCell CssClass="text-center"><i style='font-size:18px' class='far'>&#xf14a;</i>  All Category</asp:TableHeaderCell>
+                    <asp:TableHeaderCell CssClass="text-visible text-center">Price</asp:TableHeaderCell>
+                    <asp:TableHeaderCell CssClass="text-visible text-center">Quantity</asp:TableHeaderCell>
+                    <asp:TableHeaderCell CssClass="text-visible text-center">Total Price</asp:TableHeaderCell>
+                    <asp:TableHeaderCell CssClass="text-visible text-center" ColumnSpan="1">Action</asp:TableHeaderCell>
                 </asp:TableHeaderRow>
             </asp:Table>
-            <asp:Table ID="ListCart" class="table table-bordered backgroundTable1 text-center" Visible="false" runat="server">
+            <asp:Table ID="ListCart" CssClass="table table-bordered backgroundTable1 text-center" Visible="false" runat="server">
                 <asp:TableHeaderRow>
-                    <asp:TableHeaderCell class="text-center">No.</asp:TableHeaderCell>
-                    <asp:TableHeaderCell class="text-center">Product</asp:TableHeaderCell>
-                    <asp:TableHeaderCell class="text-center">Price</asp:TableHeaderCell>
-                    <asp:TableHeaderCell class="text-center">Quantity</asp:TableHeaderCell>
-                    <asp:TableHeaderCell class="text-center">Total Price</asp:TableHeaderCell>
-                    <asp:TableHeaderCell class="text-center" ColumnSpan="1">Action</asp:TableHeaderCell>
+                    <asp:TableHeaderCell CssClass="text-center">No.</asp:TableHeaderCell>
+                    <asp:TableHeaderCell CssClass="text-center">Product</asp:TableHeaderCell>
+                    <asp:TableHeaderCell CssClass="text-center">Price</asp:TableHeaderCell>
+                    <asp:TableHeaderCell CssClass="text-center">Quantity</asp:TableHeaderCell>
+                    <asp:TableHeaderCell CssClass="text-center">Total Price</asp:TableHeaderCell>
+                    <asp:TableHeaderCell CssClass="text-center" ColumnSpan="1">Action</asp:TableHeaderCell>
                 </asp:TableHeaderRow>
             </asp:Table>
+            <br />
+            <div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="LblGrandTotal" runat="server" CssClass="text-white" Font-Size="Larger" Font-Bold="True"></asp:Label>
+            </div>
             <br />
             <div align="right">
                 <button id="CheckOutBtn" class="button button1" visible="false" runat="server">Check Out</button>

@@ -87,6 +87,7 @@ namespace EventID.View
                             where x != null && x.ProductCategoryID == 1
                             select new
                             {
+                                x.ProductID,
                                 x.ProductName,
                                 x.Price,
                                 z.ImageName
@@ -104,6 +105,7 @@ namespace EventID.View
                                where x != null && x.ProductCategoryID == 2
                                select new
                                {
+                                   x.ProductID,
                                    x.ProductName,
                                    x.Price,
                                    z.ImageName
@@ -121,6 +123,7 @@ namespace EventID.View
                                  where x != null && x.ProductCategoryID == 3
                                  select new
                                  {
+                                     x.ProductID,
                                      x.ProductName,
                                      x.Price,
                                      z.ImageName

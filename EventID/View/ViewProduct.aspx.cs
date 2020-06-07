@@ -41,9 +41,23 @@ namespace EventID.View
 
         protected void btnCart_Click(object sender, EventArgs e)
         {
-            int id = 44260;
-            CartRepo.insertCart(id, 1);
-            Response.Redirect("Cart.aspx");
+            int productID = Convert.ToInt32(Request.QueryString["ID"]);
+            int userID = Convert.ToInt32(((User)Session["user"]).UserID.ToString());
+            int qty = 1;
+
+            bool isExist = CartRepo.existCartbyProductIdAndUserId(productID, userID);
+
+            if (isExist == true)
+            {
+                Model.Cart carts = CartRepo.getCartbyProductIdAndUserId(productID, userID);
+                qty = qty + carts.Quantity;
+            }
+            else
+            {
+                CartRepo.doInsertProductToCart(userID, productID, qty);
+            }
+
+            Response.Redirect("./Cart.aspx");
         }
     }
 }

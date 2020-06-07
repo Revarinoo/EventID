@@ -165,10 +165,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\AuthController.cs" />
+    <Compile Include="Controller\CartController.cs" />
     <Compile Include="Controller\ProductController.cs" />
     <Compile Include="Controller\SignUpController.cs" />
     <Compile Include="Factory\CartFactory.cs" />
     <Compile Include="Factory\ProductFactory.cs" />
+    <Compile Include="Handler\CartHandler.cs" />
     <Compile Include="Handler\ProductHandler.cs" />
     <Compile Include="Handler\LoginHandler.cs" />
     <Compile Include="Handler\SignUpHandler.cs" />

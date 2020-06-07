@@ -7,9 +7,10 @@
     <Schema Namespace="EventIDModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Cart">
           <Key>
-            <PropertyRef Name="CartID" />
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="ProductID" />
           </Key>
-          <Property Name="CartID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserID" Type="int" Nullable="false" />
           <Property Name="ProductID" Type="int" Nullable="false" />
           <Property Name="Quantity" Type="int" Nullable="false" />
         </EntityType>
@@ -103,7 +104,7 @@
           <Property Name="UserAddress" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="UserStatus" Type="varchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <Association Name="FK__Cart__ProductID__6FE99F9F">
+        <Association Name="FK__Cart__ProductID__09A971A2">
           <End Role="Product" Type="Self.Product" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
@@ -114,6 +115,20 @@
             </Principal>
             <Dependent Role="Cart">
               <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Cart__UserID__08B54D69">
+          <End Role="User" Type="Self.User" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Cart" Type="Self.Cart" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Cart">
+              <PropertyRef Name="UserID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -255,8 +270,12 @@
           <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SubCategory" EntityType="Self.SubCategory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__Cart__ProductID__6FE99F9F" Association="Self.FK__Cart__ProductID__6FE99F9F">
+          <AssociationSet Name="FK__Cart__ProductID__09A971A2" Association="Self.FK__Cart__ProductID__09A971A2">
             <End Role="Product" EntitySet="Product" />
+            <End Role="Cart" EntitySet="Cart" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cart__UserID__08B54D69" Association="Self.FK__Cart__UserID__08B54D69">
+            <End Role="User" EntitySet="User" />
             <End Role="Cart" EntitySet="Cart" />
           </AssociationSet>
           <AssociationSet Name="FK__DetailTra__Produ__3C69FB99" Association="Self.FK__DetailTra__Produ__3C69FB99">
@@ -312,8 +331,12 @@
           <EntitySet Name="Roles" EntityType="EventIDModel.Role" />
           <EntitySet Name="SubCategories" EntityType="EventIDModel.SubCategory" />
           <EntitySet Name="Users" EntityType="EventIDModel.User" />
-          <AssociationSet Name="FK__Cart__ProductID__6FE99F9F" Association="EventIDModel.FK__Cart__ProductID__6FE99F9F">
+          <AssociationSet Name="FK__Cart__ProductID__09A971A2" Association="EventIDModel.FK__Cart__ProductID__09A971A2">
             <End Role="Product" EntitySet="Products" />
+            <End Role="Cart" EntitySet="Carts" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cart__UserID__08B54D69" Association="EventIDModel.FK__Cart__UserID__08B54D69">
+            <End Role="User" EntitySet="Users" />
             <End Role="Cart" EntitySet="Carts" />
           </AssociationSet>
           <AssociationSet Name="FK__DetailTra__Produ__3C69FB99" Association="EventIDModel.FK__DetailTra__Produ__3C69FB99">
@@ -355,12 +378,14 @@
         </EntityContainer>
         <EntityType Name="Cart">
           <Key>
-            <PropertyRef Name="CartID" />
+            <PropertyRef Name="UserID" />
+            <PropertyRef Name="ProductID" />
           </Key>
-          <Property Name="CartID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
           <Property Name="ProductID" Type="Int32" Nullable="false" />
           <Property Name="Quantity" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Product" Relationship="EventIDModel.FK__Cart__ProductID__6FE99F9F" FromRole="Cart" ToRole="Product" />
+          <NavigationProperty Name="Product" Relationship="EventIDModel.FK__Cart__ProductID__09A971A2" FromRole="Cart" ToRole="Product" />
+          <NavigationProperty Name="User" Relationship="EventIDModel.FK__Cart__UserID__08B54D69" FromRole="Cart" ToRole="User" />
         </EntityType>
         <EntityType Name="DetailTransaction">
           <Key>
@@ -415,7 +440,7 @@
           <Property Name="Description" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="ProductStatus" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="SubCategoryID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Carts" Relationship="EventIDModel.FK__Cart__ProductID__6FE99F9F" FromRole="Product" ToRole="Cart" />
+          <NavigationProperty Name="Carts" Relationship="EventIDModel.FK__Cart__ProductID__09A971A2" FromRole="Product" ToRole="Cart" />
           <NavigationProperty Name="DetailTransactions" Relationship="EventIDModel.FK__DetailTra__Produ__3C69FB99" FromRole="Product" ToRole="DetailTransaction" />
           <NavigationProperty Name="Images" Relationship="EventIDModel.FK__Image__ProductID__49C3F6B7" FromRole="Product" ToRole="Image" />
           <NavigationProperty Name="ProductCategory" Relationship="EventIDModel.FK__Product__Product__398D8EEE" FromRole="Product" ToRole="ProductCategory" />
@@ -468,10 +493,11 @@
           <Property Name="UserGender" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="UserAddress" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="UserStatus" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Carts" Relationship="EventIDModel.FK__Cart__UserID__08B54D69" FromRole="User" ToRole="Cart" />
           <NavigationProperty Name="HeaderTransactions" Relationship="EventIDModel.FK__HeaderTra__UserI__2A4B4B5E" FromRole="User" ToRole="HeaderTransaction" />
           <NavigationProperty Name="Role" Relationship="EventIDModel.FK__User__RoleID__25869641" FromRole="User" ToRole="Role" />
         </EntityType>
-        <Association Name="FK__Cart__ProductID__6FE99F9F">
+        <Association Name="FK__Cart__ProductID__09A971A2">
           <End Type="EventIDModel.Product" Role="Product" Multiplicity="1">
             <OnDelete Action="Cascade" />
           </End>
@@ -482,6 +508,20 @@
             </Principal>
             <Dependent Role="Cart">
               <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Cart__UserID__08B54D69">
+          <End Type="EventIDModel.User" Role="User" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="EventIDModel.Cart" Role="Cart" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserID" />
+            </Principal>
+            <Dependent Role="Cart">
+              <PropertyRef Name="UserID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -622,7 +662,7 @@
               <MappingFragment StoreEntitySet="Cart">
                 <ScalarProperty Name="Quantity" ColumnName="Quantity" />
                 <ScalarProperty Name="ProductID" ColumnName="ProductID" />
-                <ScalarProperty Name="CartID" ColumnName="CartID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

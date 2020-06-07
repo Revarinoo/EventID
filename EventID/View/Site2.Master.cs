@@ -13,11 +13,14 @@ namespace EventID.View
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            List<Model.Cart> cart = CartRepo.getListCart();
-            int value = cart.Count;
-            labelCart.Text = value.ToString();
-            if(Session["user"] != null)
+            int value;
+            labelCart.Text = 0.ToString();
+            if (Session["user"] != null)
             {
+                User us = (User)Session["user"];
+                List<Model.Cart> cart = CartRepo.getListCartByID(us.UserID);
+                value = cart.Count;
+                labelCart.Text = value.ToString();
                 btnLogin2.Visible = false;
                 btnRegister2.Visible = false;
 

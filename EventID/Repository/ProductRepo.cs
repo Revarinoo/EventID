@@ -70,5 +70,11 @@ namespace EventID.Repository
 
             return list;
         }
+
+        public static Product GetProductByID(int id)
+        {
+            Product prk = db.Products.Where(a => a.ProductID == id).FirstOrDefault();
+            return prk;
+        }
     }
 }

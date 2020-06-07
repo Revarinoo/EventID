@@ -15,17 +15,53 @@ namespace EventID.Repository
             return db.Carts.ToList();
         }
 
-        public static void insertCart(int ProductID, int Quantity)
+        public static List<Cart> getListCartByID(int userID)
         {
-            Cart cart = CartFactory.createCartItem(ProductID, Quantity);
-            db.Carts.Add(cart);
+            var data = (from x in db.Carts
+                        where x.UserID == userID
+                        select x);
+            return data.ToList();
+        }
+
+        public static bool existCartbyProductIdAndUserId(int productId, int userId)
+        {
+            Cart carts = getCartbyProductIdAndUserId(productId, userId);
+            if (carts == null)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public static void doInsertProductToCart(int userID, int productID, int qty)
+        {
+            Cart carts = CartFactory.createCartItem(userID, productID, qty);
+            db.Carts.Add(carts);
             db.SaveChanges();
         }
 
-        public static void Delete(int id)
+        public static Cart getCartbyProductIdAndUserId(int productId, int userId)
         {
-            Cart cart = db.Carts.Where(a => a.CartID == id).FirstOrDefault();
-            db.Carts.Remove(cart);
+            Cart carts = db.Carts.Where(a => a.ProductID == productId && a.UserID == userId).FirstOrDefault();
+            return carts;
+        }
+
+        public static List<Cart> getCartUser(int id)
+        {
+            return db.Carts.Where(a => a.UserID == id).ToList();
+        }
+
+        public static void deleteProductCart(int productId, int userId)
+        {
+            Cart carts = getCartbyProductIdAndUserId(productId, userId);
+            db.Carts.Remove(carts);
+            db.SaveChanges();
+        }
+
+        public static void deleteQtyProductCart(int productId, int userId)
+        {
+            Cart carts = getCartbyProductIdAndUserId(productId, userId);
+            carts.Quantity--;
             db.SaveChanges();
         }
     }
