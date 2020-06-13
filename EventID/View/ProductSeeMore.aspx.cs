@@ -49,6 +49,7 @@ namespace EventID.View
                        where p != null && p.SubCategoryID == Subcat
                        select new
                        {
+                           p.ProductID,
                            p.ProductName,
                            p.Price,
                            i.ImageName
@@ -70,6 +71,7 @@ namespace EventID.View
                            where p != null
                            select new
                            {
+                               p.ProductID,
                                p.ProductName,
                                p.Price,
                                i.ImageName
@@ -86,6 +88,7 @@ namespace EventID.View
                            where p != null
                            select new
                            {
+                               p.ProductID,
                                p.ProductName,
                                p.Price,
                                i.ImageName

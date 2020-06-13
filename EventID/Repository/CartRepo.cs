@@ -40,6 +40,13 @@ namespace EventID.Repository
             db.SaveChanges();
         }
 
+        public static void updateCart(int userID, int productID, int quantity)
+        {
+            Cart carts = db.Carts.Where(a => a.ProductID == productID && a.UserID==userID).FirstOrDefault();
+            carts.Quantity = quantity;
+            db.SaveChanges();
+        }
+
         public static Cart getCartbyProductIdAndUserId(int productId, int userId)
         {
             Cart carts = db.Carts.Where(a => a.ProductID == productId && a.UserID == userId).FirstOrDefault();

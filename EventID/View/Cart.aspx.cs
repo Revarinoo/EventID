@@ -14,6 +14,7 @@ namespace EventID.View
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (Session["user"] == null)
             {
                 HttpCookie cookies = Request.Cookies.Get("user");
@@ -30,28 +31,34 @@ namespace EventID.View
                     Response.Redirect("Login.aspx");
                 }
             }
+
             else
             {
-                List<Model.Cart> cartList = CartRepo.getListCart();
-                int countCart = cartList.Count;
+               
+                    List<Model.Cart> cartList = CartRepo.getListCart();
+                    int countCart = cartList.Count;
 
-                if (countCart == 0)
-                {
-                    TitleKosong.Visible = true;
-                    BelanjaBtn.Visible = true;
-                    LblGrandTotal.Visible = false;
-                }
-                else
-                {
-                    Load_Cart();
+                    if (countCart == 0)
+                    {
+                        TitleKosong.Visible = true;
+                        BelanjaBtn.Visible = true;
+                        LblGrandTotal.Visible = false;
+                    }
+                    else
+                    {
                     TitleKosong.Visible = false;
                     BelanjaBtn.Visible = false;
                     ListCartTable.Visible = true;
                     LblGrandTotal.Visible = true;
                     ListCart.Visible = true;
                     CheckOutBtn.Visible = true;
+                    if (!IsPostBack) { Load_Cart(); }
+                    else { 
+                        Load_Cart();
+                        }
+                    }
                 }
-            }
+            
         }
 
         protected int getUserID()

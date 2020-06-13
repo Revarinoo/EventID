@@ -104,7 +104,7 @@
         </div>
             <asp:Repeater ID="repeaterPromotion" runat="server">
                 <ItemTemplate>
-                    <a href="./ViewProduct.aspx">
+                    <a href="./ViewProduct.aspx?ID=<%#Eval("ProductID") %>">
                         <div class="card PositionDisp" style="width: 18rem;">
                             <img src="./Assets/<%#Eval("ImageName") %>" alt="Private Beach Picture" class="cobabanner customPhoto" />
                             <div class="card-body">

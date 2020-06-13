@@ -3,12 +3,35 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link rel="stylesheet" type="text/css" href="home.css">
     <link rel="stylesheet" type="text/css" href="1.css">
+    <style>
+        @media(max-width: 800px) {
+            .filter {
+                margin-left: 35px;
+            }
+            .intro{
+                height: 250px;
+            }
+
+            .search2 {
+                width: 20%;
+            }
+
+            #btnSearch{
+                width:20%;
+            }
+
+            #dropdown{
+                width:35%;
+            }
+
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <br>
     <div class="filter">
         <input class="form-control mr-sm-2 search2" type="search" placeholder="Location" aria-label="Search">
-        <button id="dropdown" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category Type </button>
+        <button id="dropdown" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category Type </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item" href="#">Venue</a>
             <a class="dropdown-item" href="#">Cathering</a>

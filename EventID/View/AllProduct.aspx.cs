@@ -51,6 +51,7 @@ namespace EventID.View
                            where p != null
                            select new
                            {
+                               p.ProductID,
                                p.ProductName,
                                p.Price,
                                i.ImageName
@@ -67,6 +68,7 @@ namespace EventID.View
                            where p != null
                            select new
                            {
+                               p.ProductID,
                                p.ProductName,
                                p.Price,
                                i.ImageName
@@ -164,118 +166,7 @@ namespace EventID.View
             SeeMoreDBtn.Visible = false;
         }
 
-        //protected void Venue_Click(object sender, ImageClickEventArgs e)
-        //{
-        //    LblClick.Visible = true;
-        //    LblClick.Text = "Venue";
 
-        //    var list = from x in product join z in img
-        //               on x.ProductID equals z.ProductID
-        //               where x != null && x.ProductCategoryID == 1
-        //               select new
-        //               {
-        //                   x.ProductName,
-        //                   x.Price,
-        //                   z.ImageName
-        //               };
-        //    repeaterClick.DataSource = list;
-        //    repeaterClick.DataBind();
-        //    buttonControl();
-        //}
-
-        //protected void Catering_Click(object sender, ImageClickEventArgs e)
-        //{
-        //    LblClick.Visible = true;
-        //    LblClick.Text = "Catering";
-
-        //    var list = from x in product
-        //               join z in img
-        //               on x.ProductID equals z.ProductID
-        //               where x != null && x.ProductCategoryID == 2
-        //               select new
-        //               {
-        //                   x.ProductName,
-        //                   x.Price,
-        //                   z.ImageName
-        //               };
-        //    repeaterClick.DataSource = list;
-        //    repeaterClick.DataBind();
-        //    buttonControl();
-        //}
-
-        //protected void Decoration_Click(object sender, ImageClickEventArgs e)
-        //{
-        //    LblClick.Visible = true;
-        //    LblClick.Text = "Decoration";
-
-        //    var list = from x in product join z in img
-        //               on x.ProductID equals z.ProductID
-        //               where x != null && x.ProductCategoryID == 3
-        //               select new
-        //               {
-        //                   x.ProductName,
-        //                   x.Price,
-        //                   z.ImageName
-        //               };
-        //    repeaterClick.DataSource = list;
-        //    repeaterClick.DataBind();
-        //    buttonControl();
-        //}
-        //protected void MC_Click(object sender, ImageClickEventArgs e)
-        //{
-        //    LblClick.Visible = true;
-        //    LblClick.Text = "MC";
-
-        //    var list = from x in product join z in img
-        //               on x.ProductID equals z.ProductID
-        //               where x != null && x.ProductCategoryID == 4
-        //               select new
-        //               {
-        //                   x.ProductName,
-        //                   x.Price,
-        //                   z.ImageName
-        //               };
-        //    repeaterClick.DataSource = list;
-        //    repeaterClick.DataBind();
-        //    buttonControl();
-        //}
-
-        //protected void Musician_Click(object sender, ImageClickEventArgs e)
-        //{
-        //    LblClick.Visible = true;
-        //    LblClick.Text = "Musician";
-
-        //    var list = from x in product join z in img
-        //               on x.ProductID equals z.ProductID
-        //               where x != null && x.ProductCategoryID == 5
-        //               select new
-        //               {
-        //                   x.ProductName,
-        //                   x.Price,
-        //                   z.ImageName
-        //               };
-        //    repeaterClick.DataSource = list;
-        //    repeaterClick.DataBind();
-        //    buttonControl();
-        //}
-        //protected void Photography_Click(object sender, ImageClickEventArgs e)
-        //{
-        //    LblClick.Visible = true;
-        //    LblClick.Text = "Photography";
-
-        //    var list = from x in product join z in img
-        //               on x.ProductID equals z.ProductID
-        //               where x != null && x.ProductCategoryID == 6
-        //               select new
-        //               {
-        //                   x.ProductName,
-        //                   x.Price,
-        //                   z.ImageName
-        //               };
-        //    repeaterClick.DataSource = list;
-        //    repeaterClick.DataBind();
-        //    buttonControl();
-        //}
 
         protected void btnSeeMore_Click(object sender, EventArgs e)
         {

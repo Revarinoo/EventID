@@ -3,7 +3,7 @@
 }
 
 .filter {
-  margin-left: 470px;
+  margin-left: 430px;
 }
 
 #dropdown {
@@ -30,7 +30,7 @@
 
 .intro {
   background-color: #e87d1b;
-  height: 150px;
+  height: 190px;
 }
 
 #title1 {
@@ -56,6 +56,7 @@
 
 
 @media (min-width: 768px) {
+
   /* show 3 items */
   .op .carousel-inner .active,
   .op .carousel-inner .active + .carousel-item,

@@ -15,7 +15,7 @@ namespace EventID.View
         {
             if (!IsPostBack)
             {
-                int id = 44256;
+                int id = Convert.ToInt32(Request.QueryString["ID"]);
                 List<Model.Image> productImage = ImageRepo.getImage();
                 var image = from j in productImage
                             where j.ProductID == id
@@ -41,23 +41,32 @@ namespace EventID.View
 
         protected void btnCart_Click(object sender, EventArgs e)
         {
-            int productID = Convert.ToInt32(Request.QueryString["ID"]);
-            int userID = Convert.ToInt32(((User)Session["user"]).UserID.ToString());
-            int qty = 1;
 
-            bool isExist = CartRepo.existCartbyProductIdAndUserId(productID, userID);
-
-            if (isExist == true)
+            if (Session["user"] == null)
             {
-                Model.Cart carts = CartRepo.getCartbyProductIdAndUserId(productID, userID);
-                qty = qty + carts.Quantity;
+                Response.Redirect("./Login.aspx");
             }
             else
             {
-                CartRepo.doInsertProductToCart(userID, productID, qty);
-            }
+                int productID = Convert.ToInt32(Request.QueryString["ID"]);
+                int userID = Convert.ToInt32(((User)Session["user"]).UserID.ToString());
+                int qty = 1;
 
-            Response.Redirect("./Cart.aspx");
+                bool isExist = CartRepo.existCartbyProductIdAndUserId(productID, userID);
+
+                if (isExist == true)
+                {
+                    Model.Cart carts = CartRepo.getCartbyProductIdAndUserId(productID, userID);
+                    qty = qty + carts.Quantity;
+                    CartRepo.updateCart(userID, productID, qty);
+                }
+                else
+                {
+                    CartRepo.doInsertProductToCart(userID, productID, qty);
+                }
+
+                Response.Redirect("./Cart.aspx");
+            }
         }
     }
 }
