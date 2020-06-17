@@ -96,7 +96,6 @@
     <br />
     <br />
 
-    <!-- CODE MATI GK ADA EFEK APA APA-->
     <div class="container-fluid backgroundProduct1">
         <h1 class="card-subtitle judul">
             <asp:Label ID="LblClick" class="pst" Text="label" Visible="false" runat="server" />
@@ -120,7 +119,7 @@
         </asp:Repeater>
 
     </div>
-    <!-- CODE MATI GK ADA EFEK APA APA -->
+    
 
     <br />
     <br />

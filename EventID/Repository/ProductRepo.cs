@@ -13,16 +13,42 @@ namespace EventID.Repository
         public static int insertProduct(int catId, int vendorId, string name, int price, string desc
             , int subcatId)
         {
-            Product p = ProductFactory.insertProduct(catId, vendorId, name, price, desc, "avaiable", subcatId);
+            Product p = ProductFactory.insertProduct(catId, vendorId, name, price, desc, "Available", subcatId);
             db.Products.Add(p);
             db.SaveChanges();
             return p.ProductID;
-        } 
+        }
+
+        public static void UpdateProduct(int productId,int catId, string name, int price, string desc, int subcatId)
+        {
+            Product p = (Product)db.Products.Where(pr => pr.ProductID == productId).FirstOrDefault();
+            p.ProductCategoryID = catId;
+            p.ProductName = name;
+            p.Price = price;
+            p.Description = desc;
+            p.SubCategoryID = subcatId;
+            db.SaveChanges();
+        }
 
         public static void insertImage(int prodId, string name)
         {
             Image i = ProductFactory.insertImage(prodId, name);
             db.Images.Add(i);
+            db.SaveChanges();
+        }
+
+        public static void updateImage(int prodId, string name)
+        {
+            Image i = (Image)db.Images.Where(img => img.ProductID == prodId).FirstOrDefault();
+            i.ImageName = name;
+            db.SaveChanges();
+        }
+
+
+        public static void deleteProduct(int productID)
+        {
+            Product p = (Product)db.Products.Where(a => a.ProductID == productID).FirstOrDefault();
+            db.Products.Remove(p);
             db.SaveChanges();
         }
 

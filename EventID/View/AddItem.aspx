@@ -41,7 +41,7 @@
             <div class="form-group">
                 <asp:Label ID="label6" runat="server" Text="Product Image" CssClass="col-md-2 control-label"></asp:Label>
                 <div class="col-md-3">
-                    <asp:FileUpload ID="img1" CssClass="form-control" runat="server" />
+                    <asp:FileUpload ID="img1" CssClass="form-control pt-3 pb-5" runat="server" />
                 </div>
             </div>
             <div class="form-group">

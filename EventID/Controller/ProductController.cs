@@ -47,6 +47,53 @@ namespace EventID.Controller
             }
         }
 
+        public static bool tryEditProduct(int productID, string name, int price, int catId, int subcatId,
+            string desc, string imgName, out string errormssg)
+        {
+            errormssg = "";
+            if (name.Equals(""))
+            {
+                errormssg = "Product name must be filled";
+                return false;
+            }
+            else if (price.Equals(null))
+            {
+                errormssg = "Product price must be filled";
+                return false;
+            }
+            else if (catId.Equals(null))
+            {
+                errormssg = "You must choose product category";
+                return false;
+            }
+            else if (subcatId.Equals(null))
+            {
+                errormssg = "You must choose product sub category";
+                return false;
+            }
+            else if (desc.Equals(null))
+            {
+                errormssg = "Description can not be empty";
+                return false;
+            }
+            else
+            {
+                ProductHandler.EditProduct(productID ,catId, name, price, desc, subcatId);
+                if(imgName != null)
+                {
+                    ProductHandler.updateImage(productID, imgName);
+                }
+                return true;
+            }
+        }
+
+        public static bool delete(int productID, out string errormssg)
+        {
+            errormssg = "Success!";
+            ProductHandler.deleteProduct(productID);
+            return true;
+        }
+
         public static Product getProductById(int productId)
         {
             return ProductHandler.getProductById(productId);

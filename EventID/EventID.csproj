@@ -120,6 +120,8 @@
     <Content Include="View\AddItem.aspx" />
     <Content Include="View\AllProduct.aspx" />
     <Content Include="View\Cart.aspx" />
+    <Content Include="View\EditItem.aspx" />
+    <Content Include="View\EditItems.aspx" />
     <Content Include="View\Login.aspx" />
     <Content Include="View\Planner-Catering.aspx" />
     <Content Include="View\Planner-Decoration.aspx" />
@@ -266,6 +268,20 @@
     </Compile>
     <Compile Include="View\ContactUs.aspx.designer.cs">
       <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\EditItem.aspx.cs">
+      <DependentUpon>EditItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\EditItem.aspx.designer.cs">
+      <DependentUpon>EditItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\EditItems.aspx.cs">
+      <DependentUpon>EditItems.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\EditItems.aspx.designer.cs">
+      <DependentUpon>EditItems.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>

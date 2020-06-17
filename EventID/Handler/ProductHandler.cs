@@ -35,9 +35,26 @@ namespace EventID.Handler
             return x;
         }
 
+        public static void EditProduct(int productID ,int catId, string name, int price
+            , string desc, int subcatId)
+        {
+            ProductRepo.UpdateProduct(productID ,catId, name, price, desc, subcatId);
+            
+        }
+
         public static void addImage(int prodId, string name)
         {
             ProductRepo.insertImage(prodId, name);
+        }
+
+        public static void updateImage(int prodId, string name)
+        {
+            ProductRepo.updateImage(prodId, name);
+        }
+
+        public static void deleteProduct(int productID)
+        {
+            ProductRepo.deleteProduct(productID);
         }
 
         public static Product getProductById(int productId)

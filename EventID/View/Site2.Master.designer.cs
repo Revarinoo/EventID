@@ -40,13 +40,13 @@ namespace EventID.View {
         protected global::System.Web.UI.WebControls.Label labelCart;
         
         /// <summary>
-        /// addItem1 control.
+        /// dropdownMenuButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button addItem1;
+        protected global::System.Web.UI.WebControls.Button dropdownMenuButton;
         
         /// <summary>
         /// btnLogin2 control.

@@ -26,17 +26,18 @@ namespace EventID.View
 
                 if (Session["role"].Equals(3))
                 {
-                    addItem1.Visible = true;
+                    dropdownMenuButton.Visible = true; 
+                    //addItem1.Visible = true;
                 }
                 else
                 {
-                    addItem1.Visible = false;
+                    dropdownMenuButton.Visible = false;
                 }
             }
             else
             {
                 btnLogout1.Visible = false;
-                addItem1.Visible = false;
+                dropdownMenuButton.Visible = false;
             }
 
         }

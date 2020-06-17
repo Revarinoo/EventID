@@ -28,10 +28,6 @@ namespace EventID.View
                 }
             }
             
-            /*int categoryID = ProductHandler.getCategoryId(ProductCategory.Text.ToString());
-            List<String> prod = ProductHandler.getSubCategory(categoryID);
-            ProductSubCategory.DataSource = prod;
-            ProductSubCategory.DataBind();*/
         }
 
         protected void btnAdd_Click(object sender, EventArgs e)

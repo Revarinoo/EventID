@@ -47,8 +47,17 @@
                         <span class='badge badge-warning' id='lblCartCount'>
                             <asp:Label ID="labelCart" Text="text" runat="server" />
                         </span></a>
-                    <asp:Button ID="addItem1" Text="Add Item" runat="server" class="btn btn-primary btnLoginBackground" OnClick="addItem1_Click" />
-                    <asp:Button ID="btnLogin2" Text="Login" runat="server" class="btn btn-primary btnLoginBackground" OnClick="btnLogin2_Click" />
+                    <%--Dropdown--%>
+                    <div class="dropdown">
+                      <asp:Button runat="server" Text="Manage Item" class="btn btn-primary dropdown-toggle btnLoginBackground"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                        <%--Manage Item
+                      </asp:Button>--%>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="./AddItem.aspx">Add Item</a>
+                        <a class="dropdown-item" href="./EditItem.aspx">Edit Item</a>
+                      </div>
+                    </div>
+                    <%--Dropdown--%><asp:Button ID="btnLogin2" Text="Login" runat="server" class="btn btn-primary btnLoginBackground" OnClick="btnLogin2_Click" />
                     <asp:Button ID="btnRegister2" Text="Register" runat="server" class="btn btn-primary btnRegisBackground" OnClick="btnRegis2_Click" />
                     <asp:Button ID="btnLogout2" Text="Logout" runat="server" class="btn btn-primary btnRegisBackground" OnClick="btnLogout2_Click" />
                 </div>
