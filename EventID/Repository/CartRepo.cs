@@ -71,5 +71,18 @@ namespace EventID.Repository
             carts.Quantity--;
             db.SaveChanges();
         }
+
+
+        public static void deleteAllCart(int userID)
+        {
+            var cart = db.Carts.Where(c => c.UserID == userID).ToList();
+            cart.ForEach(c =>
+            {
+                db.Entry(c).State = System.Data.Entity.EntityState.Deleted;
+            });
+            db.SaveChanges();
+        }
+
+
     }
 }

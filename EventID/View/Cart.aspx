@@ -48,8 +48,13 @@
                 <asp:Label ID="LblGrandTotal" runat="server" CssClass="text-white" Font-Size="Larger" Font-Bold="True"></asp:Label>
             </div>
             <br />
+            <div>
+                <asp:Label ID="lblPayment" class="text-white ml-3" Text="Payment Type : " runat="server" Font-Size="Larger" Font-Bold="True" />
+                <asp:DropDownList ID="DropDownListPaymentType" runat="server">
+                </asp:DropDownList>
+            </div>
             <div align="right">
-                <button id="CheckOutBtn" class="button button1" visible="false" runat="server">Check Out</button>
+                <asp:Button ID="CheckOutBtn" runat="server" class="button button1 " visible="false" Text="Checkout" OnClick="btnCheckout_Click" />
                 &nbsp;&nbsp;
             </div>
             

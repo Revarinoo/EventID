@@ -170,8 +170,10 @@
     <Compile Include="Controller\CartController.cs" />
     <Compile Include="Controller\ProductController.cs" />
     <Compile Include="Controller\SignUpController.cs" />
+    <Compile Include="Controller\TransactionController.cs" />
     <Compile Include="Factory\CartFactory.cs" />
     <Compile Include="Factory\ProductFactory.cs" />
+    <Compile Include="Factory\TransactionFactory.cs" />
     <Compile Include="Handler\CartHandler.cs" />
     <Compile Include="Handler\ProductHandler.cs" />
     <Compile Include="Handler\LoginHandler.cs" />
@@ -228,10 +230,12 @@
     <Compile Include="Repository\CartRepo.cs" />
     <Compile Include="Repository\CategoryRepo.cs" />
     <Compile Include="Repository\ImageRepo.cs" />
+    <Compile Include="Repository\PaymentTypeRepo.cs" />
     <Compile Include="Repository\ProductCategoryRepo.cs" />
     <Compile Include="Repository\ProductRepo.cs" />
     <Compile Include="Repository\PromotionRepo.cs" />
     <Compile Include="Repository\SubCategoryRepo.cs" />
+    <Compile Include="Repository\TransactionRepo.cs" />
     <Compile Include="Repository\UserRepo.cs" />
     <Compile Include="Factory\UserFactory.cs" />
     <Compile Include="View\AboutUs.aspx.cs">

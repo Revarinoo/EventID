@@ -13,7 +13,6 @@
     <EntitySetMapping Name="DetailTransactions">
       <EntityTypeMapping TypeName="EventIDModel.DetailTransaction">
         <MappingFragment StoreEntitySet="DetailTransaction">
-          <ScalarProperty Name="Date" ColumnName="Date" />
           <ScalarProperty Name="Quantity" ColumnName="Quantity" />
           <ScalarProperty Name="ProductID" ColumnName="ProductID" />
           <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />

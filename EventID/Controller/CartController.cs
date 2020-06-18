@@ -1,5 +1,6 @@
 ﻿using EventID.Handler;
 using EventID.Model;
+using EventID.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,5 +39,17 @@ namespace EventID.Controller
                 }
             }
         }
+
+
+        public static List<PaymentType> getPaymentType()
+        {
+            return PaymentTypeRepo.getPaymentType();
+        }
+
+        public static int searchByName(string name)
+        {
+            return PaymentTypeRepo.searchByName(name);
+        }
+
     }
 }

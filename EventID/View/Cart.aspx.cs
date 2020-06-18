@@ -15,26 +15,28 @@ namespace EventID.View
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if (Session["user"] == null)
+            if (!IsPostBack)
             {
-                HttpCookie cookies = Request.Cookies.Get("user");
-                if (cookies != null)
+                if (Session["user"] == null)
                 {
-                    int cookie_id = int.Parse(cookies.Value);
+                    HttpCookie cookies = Request.Cookies.Get("user");
+                    if (cookies != null)
+                    {
+                        int cookie_id = int.Parse(cookies.Value);
 
-                    User users = UserRepo.GetUserByID(cookie_id);
+                        User users = UserRepo.GetUserByID(cookie_id);
 
-                    Session["user"] = users;
+                        Session["user"] = users;
+                    }
+                    else
+                    {
+                        Response.Redirect("Login.aspx");
+                    }
                 }
+
                 else
                 {
-                    Response.Redirect("Login.aspx");
-                }
-            }
 
-            else
-            {
-               
                     List<Model.Cart> cartList = CartRepo.getListCart();
                     int countCart = cartList.Count;
 
@@ -46,18 +48,20 @@ namespace EventID.View
                     }
                     else
                     {
-                    TitleKosong.Visible = false;
-                    BelanjaBtn.Visible = false;
-                    ListCartTable.Visible = true;
-                    LblGrandTotal.Visible = true;
-                    ListCart.Visible = true;
-                    CheckOutBtn.Visible = true;
-                    if (!IsPostBack) { Load_Cart(); }
-                    else { 
-                        Load_Cart();
+                        TitleKosong.Visible = false;
+                        BelanjaBtn.Visible = false;
+                        ListCartTable.Visible = true;
+                        LblGrandTotal.Visible = true;
+                        ListCart.Visible = true;
+                        CheckOutBtn.Visible = true;
+                        if (!IsPostBack) { Load_Cart(); }
+                        else
+                        {
+                            Load_Cart();
                         }
                     }
                 }
+            }
             
         }
 
@@ -142,6 +146,8 @@ namespace EventID.View
                     newRow.Cells.Add(deleteButtonCell);
                 }
                 LblGrandTotal.Text = "GRAND TOTAL : Rp. " + grandTotal.ToString();
+                DropDownListPaymentType.DataSource = CartController.getPaymentType().Select(pt => pt.PaymetTypeName).ToList();
+                DropDownListPaymentType.DataBind();
         }
 
         private void deleteButton_Click(object sender, EventArgs e)
@@ -157,6 +163,16 @@ namespace EventID.View
 
                 Response.Redirect("./Cart.aspx");
             }
+        }
+
+        protected void btnCheckout_Click(object sender, EventArgs e)
+        {
+            User us = (User)Session["user"];
+            string paymentType = DropDownListPaymentType.Text.ToString();
+            int paymentID = CartController.searchByName(paymentType);
+            TransactionController.CheckOut(us.UserID, paymentID);
+
+            Response.Redirect("Home.aspx");
         }
     }
 }

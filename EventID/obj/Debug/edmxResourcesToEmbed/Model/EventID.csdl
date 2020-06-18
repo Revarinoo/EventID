@@ -76,7 +76,6 @@
     <Property Name="TransactionID" Type="Int32" Nullable="false" />
     <Property Name="ProductID" Type="Int32" Nullable="false" />
     <Property Name="Quantity" Type="Int32" Nullable="false" />
-    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
     <NavigationProperty Name="Product" Relationship="EventIDModel.FK__DetailTra__Produ__3C69FB99" FromRole="DetailTransaction" ToRole="Product" />
     <NavigationProperty Name="HeaderTransaction" Relationship="EventIDModel.FK__DetailTra__Trans__3D5E1FD2" FromRole="DetailTransaction" ToRole="HeaderTransaction" />
   </EntityType>

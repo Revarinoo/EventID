@@ -22,7 +22,6 @@
           <Property Name="TransactionID" Type="int" Nullable="false" />
           <Property Name="ProductID" Type="int" Nullable="false" />
           <Property Name="Quantity" Type="int" Nullable="false" />
-          <Property Name="Date" Type="date" Nullable="false" />
         </EntityType>
         <EntityType Name="HeaderTransaction">
           <Key>
@@ -395,7 +394,6 @@
           <Property Name="TransactionID" Type="Int32" Nullable="false" />
           <Property Name="ProductID" Type="Int32" Nullable="false" />
           <Property Name="Quantity" Type="Int32" Nullable="false" />
-          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
           <NavigationProperty Name="Product" Relationship="EventIDModel.FK__DetailTra__Produ__3C69FB99" FromRole="DetailTransaction" ToRole="Product" />
           <NavigationProperty Name="HeaderTransaction" Relationship="EventIDModel.FK__DetailTra__Trans__3D5E1FD2" FromRole="DetailTransaction" ToRole="HeaderTransaction" />
         </EntityType>
@@ -669,7 +667,6 @@
           <EntitySetMapping Name="DetailTransactions">
             <EntityTypeMapping TypeName="EventIDModel.DetailTransaction">
               <MappingFragment StoreEntitySet="DetailTransaction">
-                <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="Quantity" ColumnName="Quantity" />
                 <ScalarProperty Name="ProductID" ColumnName="ProductID" />
                 <ScalarProperty Name="TransactionID" ColumnName="TransactionID" />
