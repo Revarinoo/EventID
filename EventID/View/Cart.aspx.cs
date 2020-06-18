@@ -172,7 +172,7 @@ namespace EventID.View
             int paymentID = CartController.searchByName(paymentType);
             TransactionController.CheckOut(us.UserID, paymentID);
 
-            Response.Redirect("Home.aspx");
+            Response.Redirect("SuccessPage.aspx");
         }
     }
 }
