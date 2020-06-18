@@ -162,6 +162,7 @@
     <Content Include="View\ContactUs.aspx" />
     <Content Include="View\Home.aspx" />
     <Content Include="View\Promotion.aspx" />
+    <Content Include="View\SuccessPage.aspx" />
     <Content Include="View\ViewProduct.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -384,6 +385,13 @@
     </Compile>
     <Compile Include="View\Site3.Master.designer.cs">
       <DependentUpon>Site3.Master</DependentUpon>
+    </Compile>
+    <Compile Include="View\SuccessPage.aspx.cs">
+      <DependentUpon>SuccessPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\SuccessPage.aspx.designer.cs">
+      <DependentUpon>SuccessPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\ViewProduct.aspx.cs">
       <DependentUpon>ViewProduct.aspx</DependentUpon>

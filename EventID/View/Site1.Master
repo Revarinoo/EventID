@@ -40,22 +40,23 @@
                             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     </ul>
                     <a href="./Cart.aspx" style="text-decoration: none;">
-                        <i class="fa" style="font-size:30px; color:white;">&#xf07a;</i>
-                        <span class='badge badge-warning' id='lblCartCount'> <asp:Label ID="labelCart" Text="text" runat="server" /> </span>
+                        <i class="fa" style="font-size: 30px; color: white;">&#xf07a;</i>
+                        <span class='badge badge-warning' id='lblCartCount'>
+                            <asp:Label ID="labelCart" Text="text" runat="server" />
+                        </span>
                     </a>
 
                     <%--Dropdown--%>
                     <div class="dropdown">
-                      <asp:Button runat="server" Text="Manage Item" class="btn btn-primary dropdown-toggle btnLoginBackground"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+                        <asp:Button runat="server" Text="Manage Item" class="btn btn-primary dropdown-toggle btnLoginBackground" type="button" ID="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
                         <%--Manage Item
                       </asp:Button>--%>
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="./AddItem.aspx">Add Item</a>
-                        <a class="dropdown-item" href="./EditItem.aspx">Edit Item</a>
-                      </div>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="./AddItem.aspx">Add Item</a>
+                            <a class="dropdown-item" href="./EditItem.aspx">Edit Item</a>
+                        </div>
                     </div>
                     <%--Dropdown--%>
-
 
                     <%--<asp:Button ID="addItem1" Text="Add Item" runat="server" class="btn btn-primary btnLoginBackground" OnClick="addItem1_Click" />--%>
                     <asp:Button ID="btnLogin1" Text="Login" runat="server" class="btn btn-primary btnLoginBackground" OnClick="btnLogin1_Click" />
@@ -70,17 +71,18 @@
     </form>
     <br />
     <div class="footer">
-  <p id="position">Copyright &copy; 2020 &nbsp; E-vent.id |
-  	<a href="./AboutUs.aspx"  id="txtColor">About us</a> |
-  	<a href="./ContactUs.aspx"  id="txtColor">Contact us</a>
-  	<div class="position9">
-  	Visit Us
+        <p id="position">
+            Copyright &copy; 2020 &nbsp; E-vent.id |
+  	<a href="./AboutUs.aspx" id="txtColor">About us</a> |
+  	<a href="./ContactUs.aspx" id="txtColor">Contact us</a>
+            <div class="position9">
+                Visit Us
   	<br>
-  	<a href="https://www.instagram.com/event.idwbs" target="_blank"><i class="fab fa-instagram"></i></a>
-  	<a href="https://twitter.com/EventID8" target="_blank"><i class="fab fa-twitter"></i></a>
-  	<a href="https://www.facebook.com/EventID-104465121259178" target="_blank"><i class="fab fa-facebook-f"></i></a>
-  	</div>
-  </p>
+                <a href="https://www.instagram.com/event.idwbs" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/EventID8" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.facebook.com/EventID-104465121259178" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            </div>
+        </p>
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
