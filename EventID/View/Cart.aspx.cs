@@ -15,8 +15,7 @@ namespace EventID.View
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if (!IsPostBack)
-            {
+            
                 if (Session["user"] == null)
                 {
                     HttpCookie cookies = Request.Cookies.Get("user");
@@ -54,14 +53,12 @@ namespace EventID.View
                         LblGrandTotal.Visible = true;
                         ListCart.Visible = true;
                         CheckOutBtn.Visible = true;
-                        if (!IsPostBack) { Load_Cart(); }
-                        else
-                        {
-                            Load_Cart();
-                        }
+                        Load_Cart();
+                        
                     }
                 }
-            }
+            
+            
             
         }
 
@@ -172,7 +169,7 @@ namespace EventID.View
             int paymentID = CartController.searchByName(paymentType);
             TransactionController.CheckOut(us.UserID, paymentID);
 
-            Response.Redirect("Home.aspx");
+            Response.Redirect("SuccessPage.aspx");
         }
     }
 }

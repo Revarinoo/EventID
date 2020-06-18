@@ -5,6 +5,7 @@
     
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <pages enableEventValidation="false"/>
     <br />
     <br />
     <div class="container-fluid">
@@ -54,6 +55,7 @@
                 </asp:DropDownList>
             </div>
             <div align="right">
+                
                 <asp:Button ID="CheckOutBtn" runat="server" class="button button1 " visible="false" Text="Checkout" OnClick="btnCheckout_Click" />
                 &nbsp;&nbsp;
             </div>
