@@ -1,5 +1,5 @@
 #hgh {
-  height: 400px;
+  height: 500px;
 }
 
 .filter {
@@ -30,7 +30,7 @@
 
 .intro {
   background-color: #e87d1b;
-  height: 190px;
+  height: 150px;
 }
 
 #title1 {
@@ -42,6 +42,8 @@
 
 #text1{
   color: white;
+  font-family: Bahnschrift;
+  font-weight: bold;
   text-align: justify;
   margin-left: 20%;
   margin-right: 20%;
