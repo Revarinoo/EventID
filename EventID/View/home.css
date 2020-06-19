@@ -30,7 +30,7 @@
 
 .intro {
   background-color: #e87d1b;
-  height: 150px;
+  height: 180px;
 }
 
 #title1 {
@@ -43,10 +43,9 @@
 #text1{
   color: white;
   font-family: Bahnschrift;
-  font-weight: bold;
   text-align: justify;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 .Recomended {
   text-align: center;

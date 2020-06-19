@@ -37,7 +37,6 @@ namespace EventID.View
             int categoryID = ProductHandler.getCategoryId(ProductCategory.Text.ToString());
             int subcategoryID = ProductHandler.getSubCategoryId(ProductSubCategory.SelectedValue.ToString());
             string desc = ProductDesc.Text.ToString();
-            //string extension = Path.GetExtension(img1.PostedFile.FileName);
             string imageName = img1.FileName.ToString();
             string errormssg = "";
             if (img1.HasFile)

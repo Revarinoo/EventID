@@ -42,7 +42,8 @@
     <br>
     <div class="intro">
         <p id="title1">Introduction E-vent.id</p>
-        <p id="text1">E-vent.id adalah platform pemesanan kebutuhan event dengan harga terjangkau. Disini kami memberikan kemudahan, memilih, dan memesan venue, cathering, decoration, dan masih banyak lagi.</p>
+        <p id="text1" style="font-size:20px;">EventID is a marketplace that provides event based services on websites. The purpose of our website is to provide a new opportunity for vendors to expand their markets and make it easier for consumers to find needs in the events industries. 
+</p>
     </div>
     <br>
 

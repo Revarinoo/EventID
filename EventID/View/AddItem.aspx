@@ -47,7 +47,7 @@
             <div class="form-group">
                 <div class="col-md-2">
                     <div class="col-md-6">
-                        <asp:Button ID="btnAdd" CssClass="btn btn-default" runat="server" Text="Add Product" OnClick="btnAdd_Click" />
+                        <asp:Button ID="btnAdd" CssClass="btn btn-primary" runat="server" Text="Add Product" OnClick="btnAdd_Click" />
                     </div>
                 </div>
             </div>
