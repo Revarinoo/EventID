@@ -16,15 +16,18 @@ namespace EventID.View
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["role"] == null)
+            if (!IsPostBack)
             {
-                Response.Redirect("Home.aspx");
-            }
-            else
-            {
-                if (!Session["role"].Equals(3))
+                if (Session["role"] == null)
                 {
                     Response.Redirect("Home.aspx");
+                }
+                else
+                {
+                    if (!Session["role"].Equals(3))
+                    {
+                        Response.Redirect("Home.aspx");
+                    }
                 }
             }
             
@@ -32,33 +35,40 @@ namespace EventID.View
 
         protected void btnAdd_Click(object sender, EventArgs e)
         {
-            string prodName = ProductName.Text.ToString();
-            int prodPrice = Int32.Parse(ProductPrice.Text.ToString());
-            int categoryID = ProductHandler.getCategoryId(ProductCategory.Text.ToString());
-            int subcategoryID = ProductHandler.getSubCategoryId(ProductSubCategory.SelectedValue.ToString());
-            string desc = ProductDesc.Text.ToString();
-            string imageName = img1.FileName.ToString();
-            string errormssg = "";
-            if (img1.HasFile)
+            try
             {
-                string SavePath = Server.MapPath("./Assets/");
-                if (!Directory.Exists(SavePath))
+                string prodName = ProductName.Text.ToString();
+                int prodPrice = Int32.Parse(ProductPrice.Text.ToString());
+                int categoryID = ProductHandler.getCategoryId(ProductCategory.Text.ToString());
+                int subcategoryID = ProductHandler.getSubCategoryId(ProductSubCategory.SelectedValue.ToString());
+                string desc = ProductDesc.Text.ToString();
+                string imageName = img1.FileName.ToString();
+                string errormssg = "";
+                if (img1.HasFile)
                 {
-                    Directory.CreateDirectory(SavePath);
+                    string SavePath = Server.MapPath("./Assets/");
+                    if (!Directory.Exists(SavePath))
+                    {
+                        Directory.CreateDirectory(SavePath);
+                    }
+                    img1.SaveAs(SavePath + imageName);
                 }
-                img1.SaveAs(SavePath + imageName);
-            }
 
-            bool success = ProductController.tryAddProduct(prodName, prodPrice, categoryID, subcategoryID
-                , desc, Convert.ToInt32(Session["id"]), imageName, out errormssg);
+                bool success = ProductController.tryAddProduct(prodName, prodPrice, categoryID, subcategoryID
+                    , desc, Convert.ToInt32(Session["id"]), imageName, out errormssg);
 
-            if (success)
-            {
-                errormsg.Text = "Add Product success!";
+                if (success)
+                {
+                    errormsg.Text = "Add Product success!";
+                }
+                else if (!success)
+                {
+                    errormsg.Text = errormssg;
+                }
             }
-            else if (!success)
+            catch
             {
-                errormsg.Text = errormssg;
+                errormsg.Text = "Add Product Failed!";
             }
         }
     }

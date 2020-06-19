@@ -39,44 +39,58 @@ namespace EventID.View
 
         protected void btnEdit_Click(object sender, EventArgs e)
         {
-            int productID = Convert.ToInt32(Request.QueryString["ID"]);
-            string prodName = ProductName.Text.ToString();
-            int prodPrice = Int32.Parse(ProductPrice.Text.ToString());
-            int categoryID = ProductHandler.getCategoryId(ProductCategory.Text.ToString());
-            int subcategoryID = ProductHandler.getSubCategoryId(ProductSubCategory.SelectedValue.ToString());
-            string desc = ProductDesc.Text.ToString();
-            string imageName = img1.FileName.ToString();
-            string errormssg = "";
-            if (img1.HasFile)
+            try
             {
-                string SavePath = Server.MapPath("./Assets/");
-                if (!Directory.Exists(SavePath))
+                int productID = Convert.ToInt32(Request.QueryString["ID"]);
+                string prodName = ProductName.Text.ToString();
+                int prodPrice = Int32.Parse(ProductPrice.Text.ToString());
+                int categoryID = ProductHandler.getCategoryId(ProductCategory.Text.ToString());
+                int subcategoryID = ProductHandler.getSubCategoryId(ProductSubCategory.SelectedValue.ToString());
+                string desc = ProductDesc.Text.ToString();
+                string imageName = img1.FileName.ToString();
+                string errormssg = "";
+                if (img1.HasFile)
                 {
-                    Directory.CreateDirectory(SavePath);
+                    string SavePath = Server.MapPath("./Assets/");
+                    if (!Directory.Exists(SavePath))
+                    {
+                        Directory.CreateDirectory(SavePath);
+                    }
+                    img1.SaveAs(SavePath + imageName);
                 }
-                img1.SaveAs(SavePath + imageName);
-            }
 
-            bool success = ProductController.tryEditProduct(productID, prodName, prodPrice, categoryID, subcategoryID
-                , desc, imageName, out errormssg);
+                bool success = ProductController.tryEditProduct(productID, prodName, prodPrice, categoryID, subcategoryID
+                    , desc, imageName, out errormssg);
 
-            if (success)
-            {
-                errormsg.Text = "Edit Product success!";
+                if (success)
+                {
+                    errormsg.Text = "Edit Product success!";
+                }
+                else if (!success)
+                {
+                    errormsg.Text = errormssg;
+                }
             }
-            else if (!success)
+            catch
             {
-                errormsg.Text = errormssg;
+                errormsg.Text = "Edit Product Failed!";
             }
         }
 
         protected void btnDelete_Click(object sender, EventArgs e)
         {
-            string errormssg = "";
-            int productID = Convert.ToInt32(Request.QueryString["ID"]);
-            bool success = ProductController.delete(productID, out errormssg);
-            errormsg.Text = errormssg;
-            Response.Redirect("EditItem.aspx");
+            try
+            {
+                string errormssg = "";
+                int productID = Convert.ToInt32(Request.QueryString["ID"]);
+                bool success = ProductController.delete(productID, out errormssg);
+                errormsg.Text = errormssg;
+                Response.Redirect("EditItem.aspx");
+            }
+            catch
+            {
+                errormsg.Text = "Failed!";
+            }
         }
     }
 }
