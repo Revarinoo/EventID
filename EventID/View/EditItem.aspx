@@ -40,7 +40,7 @@
                 <a href="./EditItems.aspx?ID=<%#Eval("ProductID") %>">
                     <div class="row" style="display: inline-block; margin-left: 20px;">
                         <div class="col-sm-3 col-md-3">
-                            <div class="thumbnail">
+                            <div class="thumbnail" style="border: 1px solid #e87d1b">
                                 <img src="./Assets/<%#Eval("ImageName") %>" alt="Private Beach Picture" class="cobabanner" />
                                 <div class="captions">
                                     <h5><%#Eval("ProductName") %></h5>
@@ -52,4 +52,20 @@
                 </a>
             </ItemTemplate>
         </asp:Repeater>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
 </asp:Content>
